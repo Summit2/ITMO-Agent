@@ -9,9 +9,6 @@
 Метод POST - получить ответ на вопрос в формате JSON  
 URL: [147.45.232.168/api/request](147.45.232.168/api/request) + json
 
-Пример:
-
-
 
 
 
@@ -23,13 +20,11 @@ docker-compose up -d
 ```
 Она соберёт Docker-образ, а затем запустит контейнер.
 
-После успешного запуска контейнера приложение будет доступно на http://localhost:8080.
-
 ## Проверка работы
 Отправьте POST-запрос на эндпоинт /api/request. Например, используйте curl:
 
 ```bash
-curl --location --request POST 'http://localhost:8080/api/request' \
+curl --location --request POST 'http://147.45.232.168/api/request' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "query": "В каком городе находится главный кампус Университета ИТМО?\n1. Москва\n2. Санкт-Петербург\n3. Екатеринбург\n4. Нижний Новгород",
@@ -50,11 +45,11 @@ curl --location --request POST 'http://localhost:8080/api/request' \
 }
 ```
 
-id будет соответствовать тому, что вы отправили в запросе,
-answer (в базовой версии) всегда будет 5.
-## Кастомизация
-Чтобы изменить логику ответа, отредактируйте функцию handle_request в main.py.
-Если нужно использовать дополнительные библиотеки, добавьте их в requirements.txt и пересоберите образ.
+
+
+[Пример](https://github.com/Summit2/ITMO-Agent/blob/master/example.png)
+
+
 
 
 Чтобы остановить сервис, выполните:
