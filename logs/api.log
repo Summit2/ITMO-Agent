@@ -642,3 +642,16 @@ Request body: {
 Status: 200
 Response body: {"id":1,"answer":null,"reasoning":"МГТУ им. Н. Э. Баумана находится в Москве.\\n Ответ сгенерирован с помощью YandexGPT","sources":["https://bmstu.ru/","https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9D._%D0%AD._%D0%91%D0%B0%D1%83%D0%BC%D0%B0%D0%BD%D0%B0","https://yandex.ru/maps/org/mgtu_im_n_e_baumana/stationer/"]}
 Duration: 2.466s
+2025-01-31 20:23:53 | INFO | Incoming request: POST http://localhost:8080/api/request
+Request body: {
+  "query": "В каком городе находится Бауманка?",
+  "id": 1
+}
+2025-01-31 20:23:53 | INFO | None
+2025-01-31 20:23:53 | INFO | Processing prediction request with id: 1
+2025-01-31 20:23:56 | INFO | Yandex GPT answer: {'answer': -1, 'reasoning': 'МГТУ им. Н. Э. Баумана находится в Москве.', 'links': ['https://bmstu.ru/', 'https://ru.wikipedia.org/wiki/Московский_государственный_технический_университет_имени_Н._Э._Баумана', 'https://yandex.ru/maps/org/mgtu_im_n_e_baumana/stationer/']}
+2025-01-31 20:23:56 | INFO | Successfully processed request 1
+2025-01-31 20:23:56 | INFO | Request completed: POST http://localhost:8080/api/request
+Status: 200
+Response body: {"id":1,"answer":null,"reasoning":"МГТУ им. Н. Э. Баумана находится в Москве.\\n Ответ сгенерирован с помощью YandexGPT","sources":["https://bmstu.ru/","https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9D._%D0%AD._%D0%91%D0%B0%D1%83%D0%BC%D0%B0%D0%BD%D0%B0","https://yandex.ru/maps/org/mgtu_im_n_e_baumana/stationer/"]}
+Duration: 2.627s

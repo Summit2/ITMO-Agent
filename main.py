@@ -86,7 +86,7 @@ async def predict(body: PredictionRequest):
     get_iam_token()
     try:
         # search_answer = getYandexSearchAnswer(IAM_TOKEN,FOLDER_ID, body.query)
-
+        
         await logger.info(f"Processing prediction request with id: {body.id}")
         # Здесь вызов модели
         gpt_answer = getYandexGptAnswer(IAM_TOKEN,FOLDER_ID, body.query)
@@ -116,9 +116,6 @@ async def predict(body: PredictionRequest):
         raise HTTPException(status_code=500, detail="Internal server error")
 
 
-
-
-search_answer = getYandexSearchAnswer(IAM_TOKEN,FOLDER_ID, " итмо дата создания")
 
 
 

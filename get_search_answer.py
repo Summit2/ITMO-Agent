@@ -27,37 +27,3 @@ def getYandexSearchAnswer(iam_token,folder_id, query):
     else:
         print(f"Ошибка {response.status_code}: {response.text}")
         return None
-
-#     url = 'https://searchapi.api.cloud.yandex.net/v2/web/searchAsync'
-#     data = {
-#     "query": {
-#       "searchType": "SEARCH_TYPE_RU",
-#       "queryText": query,
-#       "familyMode": "FAMILY_MODE_MODERATE",
-#       "page": "1"
-#     },
-#     "sortSpec": {
-#       "sortMode": "SORT_MODE_BY_RELEVANCE",
-#       "sortOrder": "SORT_ORDER_DESC"
-#     },
-#     "groupSpec": {
-#       "groupMode": "GROUP_MODE_DEEP",
-#       "groupsOnPage": "3",
-#     #   "docsInGroup": "3"
-#     },
-#     # "maxPassages": "3",
-#     # "region": "65",
-#     "l10N": "LOCALIZATION_RU",
-#     "folderId": folder_id
-# }
-#     headers = {"Authorization": f"Bearer {iam_token}"}
-#     response = requests.post(url, json=data, headers=headers)
-#     if response.status_code == 200:
-#         response_json =  response.json()
-        
-#         # result = json.loads(response_json)
-#         print(response)
-#         # return result
-#     else:
-#         print(f"err: {response.status_code}, {response.text}")
-#         return None
