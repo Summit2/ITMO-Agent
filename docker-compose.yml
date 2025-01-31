@@ -1,3 +1,5 @@
+version: "3.8"
+
 services:
   fastapi-service:
     build: .
@@ -5,7 +7,7 @@ services:
     ports:
       - "8080:8080"
     restart: unless-stopped
-
+    
     environment:
       - TZ=UTC
     volumes:
