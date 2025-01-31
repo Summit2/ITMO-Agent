@@ -47,8 +47,7 @@ curl --location --request POST 'http://147.45.232.168/api/request' \
 
 
 
-[Пример](https://github.com/Summit2/ITMO-Agent/blob/master/example.png)
-
+![Пример](https://github.com/Summit2/ITMO-Agent/blob/master/example.png)
 
 
 
@@ -57,3 +56,6 @@ curl --location --request POST 'http://147.45.232.168/api/request' \
 ```bash
 docker-compose down
 ```
+
+
+
