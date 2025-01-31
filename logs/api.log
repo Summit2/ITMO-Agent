@@ -450,3 +450,195 @@ Request body: {
 Status: 200
 Response body: {"id":1,"answer":2,"reasoning":"Университет ИТМО имеет главный кампус в Санкт-Петербурге.","sources":["https://www.itmo.ru/","https://en.itmo.ru/","https://spb.hse.ru/itmo/"]}
 Duration: 2.119s
+2025-01-31 19:31:02 | INFO | Incoming request: POST http://localhost:8080/api/request
+Request body: {
+  "query": "В каком городе находится главный кампус Университета ИТМО?\n1. Москва\n2. Санкт-Петербург\n3. Екатеринбург\n4. Нижний Новгород",
+  "id": 1
+}
+2025-01-31 19:31:02 | INFO | Processing prediction request with id: 1
+2025-01-31 19:31:04 | INFO | Yandex GPT answer: {'answer': 2, 'reasoning': 'Главный кампус Университета ИТМО находится в Санкт-Петербурге.', 'links': ['https://www.itmo.ru/ru/about/campus.htm', 'https://en.itmo.ru/about_university/campuses', 'https://spb.hse.ru/itmo/']}
+2025-01-31 19:31:04 | INFO | Successfully processed request 1
+2025-01-31 19:31:04 | INFO | Request completed: POST http://localhost:8080/api/request
+Status: 200
+Response body: {"id":1,"answer":2,"reasoning":"Главный кампус Университета ИТМО находится в Санкт-Петербурге.\\n Ответ сгенерирован с помощью YandexGPT","sources":["https://www.itmo.ru/ru/about/campus.htm","https://en.itmo.ru/about_university/campuses","https://spb.hse.ru/itmo/"]}
+Duration: 2.504s
+2025-01-31 19:31:34 | INFO | Incoming request: POST http://localhost:8080/api/request
+Request body: {
+  "query": "В каком городе находится Бауманка?",
+  "id": 1
+}
+2025-01-31 19:31:34 | INFO | Processing prediction request with id: 1
+2025-01-31 19:31:37 | INFO | Yandex GPT answer: {'answer': -1, 'reasoning': 'МГТУ им. Н. Э. Баумана находится в Москве.', 'links': ['https://bmstu.ru/', 'https://ru.wikipedia.org/wiki/Московский_государственный_технический_университет_имени_Н._Э._Баумана', 'https://mosmap.ru/poi/view/id/125']}
+2025-01-31 19:31:37 | INFO | Successfully processed request 1
+2025-01-31 19:31:37 | INFO | Request completed: POST http://localhost:8080/api/request
+Status: 200
+Response body: {"id":1,"answer":null,"reasoning":"МГТУ им. Н. Э. Баумана находится в Москве.\\n Ответ сгенерирован с помощью YandexGPT","sources":["https://bmstu.ru/","https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9D._%D0%AD._%D0%91%D0%B0%D1%83%D0%BC%D0%B0%D0%BD%D0%B0","https://mosmap.ru/poi/view/id/125"]}
+Duration: 2.461s
+2025-01-31 19:48:38 | INFO | Incoming request: POST http://localhost:8080/api/request
+Request body: {
+  "query": "В каком городе находится Бауманка?",
+  "id": 1
+}
+2025-01-31 19:48:38 | INFO | Processing prediction request with id: 1
+2025-01-31 19:48:41 | INFO | Yandex GPT answer: {'answer': -1, 'reasoning': 'МГТУ им. Н. Э. Баумана находится в Москве.', 'links': ['https://bmstu.ru/', 'https://ru.wikipedia.org/wiki/Московский_государственный_технический_университет_имени_Н._Э._Баумана', 'https://yandex.ru/maps/org/mgtu_im_n_e_baumana/view/']}
+2025-01-31 19:48:41 | INFO | Successfully processed request 1
+2025-01-31 19:48:41 | INFO | Request completed: POST http://localhost:8080/api/request
+Status: 200
+Response body: {"id":1,"answer":null,"reasoning":"МГТУ им. Н. Э. Баумана находится в Москве.\\n Ответ сгенерирован с помощью YandexGPT","sources":["https://bmstu.ru/","https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9D._%D0%AD._%D0%91%D0%B0%D1%83%D0%BC%D0%B0%D0%BD%D0%B0","https://yandex.ru/maps/org/mgtu_im_n_e_baumana/view/"]}
+Duration: 2.484s
+2025-01-31 19:50:01 | INFO | Incoming request: POST http://localhost:8080/api/request
+Request body: {
+  "query": "В каком городе находится Бауманка?",
+  "id": 1
+}
+2025-01-31 19:50:01 | INFO | Token: t1.9euelZqQyouYj5SZi8mQzs6ekY-ezO3rnpWai5SWjJmJlYucz4rGz5TKmcjl8_d8MAtD-e8ta0Z0_t3z9zxfCEP57y1rRnT-zef1656VmseQkpKclpjMjcvLi42Lys_P7_zF656VmseQkpKclpjMjcvLi42Lys_P.zRhvX4isos_gDR1UEkJVgs9YbSYSK16dIJds4lAHjJjWXFrB2U4f0uIinnpUKdDQ4SrH9cb25TwRY55c7XkvAQ
+2025-01-31 19:50:01 | INFO | Processing prediction request with id: 1
+2025-01-31 19:50:03 | INFO | Yandex GPT answer: {'answer': -1, 'reasoning': 'МГТУ им. Н. Э. Баумана находится в Москве.', 'links': ['https://bmstu.ru/', 'https://ru.wikipedia.org/wiki/Московский_государственный_технический_университет_имени_Н._Э._Баумана', 'https://moskvichmag.ru/gorod/v-kakom-gorode-nahoditsya-baumanka/']}
+2025-01-31 19:50:03 | INFO | Successfully processed request 1
+2025-01-31 19:50:03 | INFO | Request completed: POST http://localhost:8080/api/request
+Status: 200
+Response body: {"id":1,"answer":null,"reasoning":"МГТУ им. Н. Э. Баумана находится в Москве.\\n Ответ сгенерирован с помощью YandexGPT","sources":["https://bmstu.ru/","https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9D._%D0%AD._%D0%91%D0%B0%D1%83%D0%BC%D0%B0%D0%BD%D0%B0","https://moskvichmag.ru/gorod/v-kakom-gorode-nahoditsya-baumanka/"]}
+Duration: 2.648s
+2025-01-31 19:50:07 | INFO | Incoming request: POST http://localhost:8080/api/request
+Request body: {
+  "query": "В каком городе находится Бауманка?",
+  "id": 1
+}
+2025-01-31 19:50:07 | INFO | Token: t1.9euelZqWnMbOlIzHmciMzs-ak5uYmu3rnpWai5SWjJmJlYucz4rGz5TKmcjl8_d-MAtD-e9aHQ4i_d3z9z5fCEP571odDiL9zef1656Vmp2blpDMkcidmZqem57LkM2K7_zF656Vmp2blpDMkcidmZqem57LkM2K.TPFuph4nmMDzDSdwtrE7J_Gx_sNPqzoA7ggNrK5FKnGOHwCy1x1RuHUHurwouFmauVJxuNNc14vKPSn0Vs5sCA
+2025-01-31 19:50:07 | INFO | Processing prediction request with id: 1
+2025-01-31 19:50:10 | INFO | Yandex GPT answer: {'answer': -1, 'reasoning': 'МГТУ им. Н. Э. Баумана находится в Москве.', 'links': ['https://bmstu.ru/', 'https://ru.wikipedia.org/wiki/Московский_государственный_технический_университет_имени_Н._Э._Баумана', 'https://mosmap.ru/poi/view/1024']}
+2025-01-31 19:50:10 | INFO | Successfully processed request 1
+2025-01-31 19:50:10 | INFO | Request completed: POST http://localhost:8080/api/request
+Status: 200
+Response body: {"id":1,"answer":null,"reasoning":"МГТУ им. Н. Э. Баумана находится в Москве.\\n Ответ сгенерирован с помощью YandexGPT","sources":["https://bmstu.ru/","https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9D._%D0%AD._%D0%91%D0%B0%D1%83%D0%BC%D0%B0%D0%BD%D0%B0","https://mosmap.ru/poi/view/1024"]}
+Duration: 2.423s
+2025-01-31 19:50:14 | INFO | Incoming request: POST http://localhost:8080/api/request
+Request body: {
+  "query": "В каком городе находится Бауманка?",
+  "id": 1
+}
+2025-01-31 19:50:14 | INFO | Token: t1.9euelZrGz8qTmpOVkJeSlpTOzI2cmu3rnpWai5SWjJmJlYucz4rGz5TKmcjl9Pd6LQtD-e93EBzw3fT3OlwIQ_nvdxAc8M3n9euelZqVlIvGx4yJms2MlpTMz5mcku_8xeuelZqVlIvGx4yJms2MlpTMz5mckg.aDyR-DcTmhLeBiOy58qCpsMMZsy7omIWXfoRTR9ed-cw20LrVyogL2-fDW-TOO-feJ7sJiNSjolzzJ5b-BCwDw
+2025-01-31 19:50:14 | INFO | Processing prediction request with id: 1
+2025-01-31 19:50:16 | INFO | Yandex GPT answer: {'answer': -1, 'reasoning': 'МГТУ им. Н. Э. Баумана находится в Москве.', 'links': ['https://bmstu.ru/', 'https://ru.wikipedia.org/wiki/Московский_государственный_технический_университет_имени_Н._Э._Баумана', 'https://mosmap.ru/poi/view/124']}
+2025-01-31 19:50:16 | INFO | Successfully processed request 1
+2025-01-31 19:50:16 | INFO | Request completed: POST http://localhost:8080/api/request
+Status: 200
+Response body: {"id":1,"answer":null,"reasoning":"МГТУ им. Н. Э. Баумана находится в Москве.\\n Ответ сгенерирован с помощью YandexGPT","sources":["https://bmstu.ru/","https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9D._%D0%AD._%D0%91%D0%B0%D1%83%D0%BC%D0%B0%D0%BD%D0%B0","https://mosmap.ru/poi/view/124"]}
+Duration: 2.385s
+2025-01-31 19:50:16 | INFO | Incoming request: POST http://localhost:8080/api/request
+Request body: {
+  "query": "В каком городе находится Бауманка?",
+  "id": 1
+}
+2025-01-31 19:50:16 | INFO | Token: t1.9euelZqWnMbOlIzHmciMzs-ak5uYmu3rnpWai5SWjJmJlYucz4rGz5TKmcjl8_d-MAtD-e9aHQ4i_d3z9z5fCEP571odDiL9zef1656Vmp2blpDMkcidmZqem57LkM2K7_zF656Vmp2blpDMkcidmZqem57LkM2K.TPFuph4nmMDzDSdwtrE7J_Gx_sNPqzoA7ggNrK5FKnGOHwCy1x1RuHUHurwouFmauVJxuNNc14vKPSn0Vs5sCA
+2025-01-31 19:50:16 | INFO | Processing prediction request with id: 1
+2025-01-31 19:50:19 | INFO | Yandex GPT answer: {'answer': -1, 'reasoning': 'МГТУ им. Н. Э. Баумана (Бауманка) находится в Москве.', 'links': ['https://bmstu.ru/', 'https://ru.wikipedia.org/wiki/МГТУ_им._Н._Э._Баумана', 'https://www.baumanec.ru/']}
+2025-01-31 19:50:19 | INFO | Successfully processed request 1
+2025-01-31 19:50:19 | INFO | Request completed: POST http://localhost:8080/api/request
+Status: 200
+Response body: {"id":1,"answer":null,"reasoning":"МГТУ им. Н. Э. Баумана (Бауманка) находится в Москве.\\n Ответ сгенерирован с помощью YandexGPT","sources":["https://bmstu.ru/","https://ru.wikipedia.org/wiki/%D0%9C%D0%93%D0%A2%D0%A3_%D0%B8%D0%BC._%D0%9D._%D0%AD._%D0%91%D0%B0%D1%83%D0%BC%D0%B0%D0%BD%D0%B0","https://www.baumanec.ru/"]}
+Duration: 2.323s
+2025-01-31 19:50:19 | INFO | Incoming request: POST http://localhost:8080/api/request
+Request body: {
+  "query": "В каком городе находится Бауманка?",
+  "id": 1
+}
+2025-01-31 19:50:19 | INFO | Token: t1.9euelZqQyouYj5SZi8mQzs6ekY-ezO3rnpWai5SWjJmJlYucz4rGz5TKmcjl8_d8MAtD-e8ta0Z0_t3z9zxfCEP57y1rRnT-zef1656VmseQkpKclpjMjcvLi42Lys_P7_zF656VmseQkpKclpjMjcvLi42Lys_P.zRhvX4isos_gDR1UEkJVgs9YbSYSK16dIJds4lAHjJjWXFrB2U4f0uIinnpUKdDQ4SrH9cb25TwRY55c7XkvAQ
+2025-01-31 19:50:19 | INFO | Processing prediction request with id: 1
+2025-01-31 19:50:21 | INFO | Yandex GPT answer: {'answer': -1, 'reasoning': 'МГТУ им. Н. Э. Баумана находится в Москве.', 'links': ['https://bmstu.ru/', 'https://ru.wikipedia.org/wiki/Московский_государственный_технический_университет_имени_Н._Э._Баумана', 'https://yandex.ru/maps/org/mgtu_im_n_e_baumana/view/']}
+2025-01-31 19:50:21 | INFO | Successfully processed request 1
+2025-01-31 19:50:21 | INFO | Request completed: POST http://localhost:8080/api/request
+Status: 200
+Response body: {"id":1,"answer":null,"reasoning":"МГТУ им. Н. Э. Баумана находится в Москве.\\n Ответ сгенерирован с помощью YandexGPT","sources":["https://bmstu.ru/","https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9D._%D0%AD._%D0%91%D0%B0%D1%83%D0%BC%D0%B0%D0%BD%D0%B0","https://yandex.ru/maps/org/mgtu_im_n_e_baumana/view/"]}
+Duration: 2.552s
+2025-01-31 19:50:21 | INFO | Incoming request: POST http://localhost:8080/api/request
+Request body: {
+  "query": "В каком городе находится Бауманка?",
+  "id": 1
+}
+2025-01-31 19:50:21 | INFO | Token: t1.9euelZqYx5eWjpzPicqby5DGiZ6Jx-3rnpWai5SWjJmJlYucz4rGz5TKmcjl8_cmNgtD-e8iaG1D_t3z92ZkCEP57yJobUP-zef1656VmsfMmMeTmJ6RlYmLlJeZx5nM7_zF656VmsfMmMeTmJ6RlYmLlJeZx5nM.uM9Zgi2R1XfIngIviFO-JeNeN988vx1uQ2n-3FyJRj8ZtuVfjSBbXNBEFYIVlRldw1jaM_NWjedcFRWl81cMBw
+2025-01-31 19:50:21 | INFO | Processing prediction request with id: 1
+2025-01-31 19:50:24 | INFO | Yandex GPT answer: {'answer': -1, 'reasoning': 'МГТУ им. Н. Э. Баумана находится в Москве.', 'links': ['https://bmstu.ru/', 'https://ru.wikipedia.org/wiki/Московский_государственный_технический_университет_имени_Н._Э._Баумана', 'https://moskvichmag.ru/gorod/v-kakom-gorode-nahoditsya-baumanka/']}
+2025-01-31 19:50:24 | INFO | Successfully processed request 1
+2025-01-31 19:50:24 | INFO | Request completed: POST http://localhost:8080/api/request
+Status: 200
+Response body: {"id":1,"answer":null,"reasoning":"МГТУ им. Н. Э. Баумана находится в Москве.\\n Ответ сгенерирован с помощью YandexGPT","sources":["https://bmstu.ru/","https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9D._%D0%AD._%D0%91%D0%B0%D1%83%D0%BC%D0%B0%D0%BD%D0%B0","https://moskvichmag.ru/gorod/v-kakom-gorode-nahoditsya-baumanka/"]}
+Duration: 2.538s
+2025-01-31 19:50:24 | INFO | Incoming request: POST http://localhost:8080/api/request
+Request body: {
+  "query": "В каком городе находится Бауманка?",
+  "id": 1
+}
+2025-01-31 19:50:24 | INFO | Token: t1.9euelZqbks-bys3JnZ7OlJ6ZnJqOjO3rnpWai5SWjJmJlYucz4rGz5TKmcjl8_cAMQtD-e8LSXta_t3z90BfCEP57wtJe1r-zef1656VmszKi8iYksmMjIqclYmSyMzN7_zF656VmszKi8iYksmMjIqclYmSyMzN.ZdvCTDxqpXEPYLuj8_TiS0Jha6C9PqgwgHtGffTKdo2JkoMD5zYamh1Uy5zMJu3oHLLm8Zj4uTnib_MAachRCA
+2025-01-31 19:50:24 | INFO | Processing prediction request with id: 1
+2025-01-31 19:50:26 | INFO | Yandex GPT answer: {'answer': -1, 'reasoning': 'МГТУ им. Н. Э. Баумана находится в Москве.', 'links': ['https://baumanmstu.ru/', 'https://ru.wikipedia.org/wiki/Московский_государственный_технический_университет_имени_Н._Э._Баумана', 'https://msk.ru/places/mgtu-im-n-e-baumana/']}
+2025-01-31 19:50:26 | INFO | Successfully processed request 1
+2025-01-31 19:50:26 | INFO | Request completed: POST http://localhost:8080/api/request
+Status: 200
+Response body: {"id":1,"answer":null,"reasoning":"МГТУ им. Н. Э. Баумана находится в Москве.\\n Ответ сгенерирован с помощью YandexGPT","sources":["https://baumanmstu.ru/","https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9D._%D0%AD._%D0%91%D0%B0%D1%83%D0%BC%D0%B0%D0%BD%D0%B0","https://msk.ru/places/mgtu-im-n-e-baumana/"]}
+Duration: 2.552s
+2025-01-31 19:50:26 | INFO | Incoming request: POST http://localhost:8080/api/request
+Request body: {
+  "query": "В каком городе находится Бауманка?",
+  "id": 1
+}
+2025-01-31 19:50:26 | INFO | Token: t1.9euelZqWnMbOlIzHmciMzs-ak5uYmu3rnpWai5SWjJmJlYucz4rGz5TKmcjl8_d-MAtD-e9aHQ4i_d3z9z5fCEP571odDiL9zef1656Vmp2blpDMkcidmZqem57LkM2K7_zF656Vmp2blpDMkcidmZqem57LkM2K.TPFuph4nmMDzDSdwtrE7J_Gx_sNPqzoA7ggNrK5FKnGOHwCy1x1RuHUHurwouFmauVJxuNNc14vKPSn0Vs5sCA
+2025-01-31 19:50:26 | INFO | Processing prediction request with id: 1
+2025-01-31 19:50:29 | INFO | Yandex GPT answer: {'answer': -1, 'reasoning': 'МГТУ им. Н. Э. Баумана находится в Москве.', 'links': ['https://bmstu.ru/', 'https://ru.wikipedia.org/wiki/Московский_государственный_технический_университет_имени_Н._Э._Баумана', 'https://yandex.ru/maps/org/mgtu_im_n_e_baumana/view/']}
+2025-01-31 19:50:29 | INFO | Successfully processed request 1
+2025-01-31 19:50:29 | INFO | Request completed: POST http://localhost:8080/api/request
+Status: 200
+Response body: {"id":1,"answer":null,"reasoning":"МГТУ им. Н. Э. Баумана находится в Москве.\\n Ответ сгенерирован с помощью YandexGPT","sources":["https://bmstu.ru/","https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9D._%D0%AD._%D0%91%D0%B0%D1%83%D0%BC%D0%B0%D0%BD%D0%B0","https://yandex.ru/maps/org/mgtu_im_n_e_baumana/view/"]}
+Duration: 2.538s
+2025-01-31 19:50:29 | INFO | Incoming request: POST http://localhost:8080/api/request
+Request body: {
+  "query": "В каком городе находится Бауманка?",
+  "id": 1
+}
+2025-01-31 19:50:29 | INFO | Token: t1.9euelZqNlcaJnZCcnpyMnJCYismWju3rnpWai5SWjJmJlYucz4rGz5TKmcjl8_cmNgtD-e82BzNC_t3z92ZkCEP57zYHM0L-zef1656VmpPKys-blZSVyszNkJycmc6S7_zF656VmpPKys-blZSVyszNkJycmc6S.uBsMoPNINnpAu-4DLpuwcvJWvgIL1INNXu7HXKxaVIbyBMUQK4bH-SZff0KDe-rmzfSPQ2hrItgZSJO_41rhAg
+2025-01-31 19:50:29 | INFO | Processing prediction request with id: 1
+2025-01-31 19:50:31 | INFO | Yandex GPT answer: {'answer': -1, 'reasoning': 'МГТУ им. Н. Э. Баумана находится в Москве.', 'links': ['https://bmstu.ru/', 'https://ru.wikipedia.org/wiki/Московский_государственный_технический_университет_имени_Н._Э._Баумана', 'https://mosmap.ru/poi/view/123']}
+2025-01-31 19:50:31 | INFO | Successfully processed request 1
+2025-01-31 19:50:31 | INFO | Request completed: POST http://localhost:8080/api/request
+Status: 200
+Response body: {"id":1,"answer":null,"reasoning":"МГТУ им. Н. Э. Баумана находится в Москве.\\n Ответ сгенерирован с помощью YandexGPT","sources":["https://bmstu.ru/","https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9D._%D0%AD._%D0%91%D0%B0%D1%83%D0%BC%D0%B0%D0%BD%D0%B0","https://mosmap.ru/poi/view/123"]}
+Duration: 2.325s
+2025-01-31 19:50:31 | INFO | Incoming request: POST http://localhost:8080/api/request
+Request body: {
+  "query": "В каком городе находится Бауманка?",
+  "id": 1
+}
+2025-01-31 19:50:31 | INFO | Token: t1.9euelZqWnMbOlIzHmciMzs-ak5uYmu3rnpWai5SWjJmJlYucz4rGz5TKmcjl8_d-MAtD-e9aHQ4i_d3z9z5fCEP571odDiL9zef1656Vmp2blpDMkcidmZqem57LkM2K7_zF656Vmp2blpDMkcidmZqem57LkM2K.TPFuph4nmMDzDSdwtrE7J_Gx_sNPqzoA7ggNrK5FKnGOHwCy1x1RuHUHurwouFmauVJxuNNc14vKPSn0Vs5sCA
+2025-01-31 19:50:31 | INFO | Processing prediction request with id: 1
+2025-01-31 19:50:34 | INFO | Yandex GPT answer: {'answer': -1, 'reasoning': 'МГТУ им. Н. Э. Баумана находится в Москве.', 'links': ['https://bmstu.ru/', 'https://ru.wikipedia.org/wiki/Московский_государственный_технический_университет_имени_Н._Э._Баумана', 'https://yandex.ru/maps/org/mgtu_im_n_e_baumana/stationer/']}
+2025-01-31 19:50:34 | INFO | Successfully processed request 1
+2025-01-31 19:50:34 | INFO | Request completed: POST http://localhost:8080/api/request
+Status: 200
+Response body: {"id":1,"answer":null,"reasoning":"МГТУ им. Н. Э. Баумана находится в Москве.\\n Ответ сгенерирован с помощью YandexGPT","sources":["https://bmstu.ru/","https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9D._%D0%AD._%D0%91%D0%B0%D1%83%D0%BC%D0%B0%D0%BD%D0%B0","https://yandex.ru/maps/org/mgtu_im_n_e_baumana/stationer/"]}
+Duration: 2.584s
+2025-01-31 19:50:34 | INFO | Incoming request: POST http://localhost:8080/api/request
+Request body: {
+  "query": "В каком городе находится Бауманка?",
+  "id": 1
+}
+2025-01-31 19:50:34 | INFO | Token: t1.9euelZqNlcaJnZCcnpyMnJCYismWju3rnpWai5SWjJmJlYucz4rGz5TKmcjl8_cmNgtD-e82BzNC_t3z92ZkCEP57zYHM0L-zef1656VmpPKys-blZSVyszNkJycmc6S7_zF656VmpPKys-blZSVyszNkJycmc6S.uBsMoPNINnpAu-4DLpuwcvJWvgIL1INNXu7HXKxaVIbyBMUQK4bH-SZff0KDe-rmzfSPQ2hrItgZSJO_41rhAg
+2025-01-31 19:50:34 | INFO | Processing prediction request with id: 1
+2025-01-31 19:50:37 | INFO | Yandex GPT answer: {'answer': -1, 'reasoning': 'МГТУ им. Н. Э. Баумана находится в Москве.', 'links': ['https://bmstu.ru/', 'https://ru.wikipedia.org/wiki/Московский_государственный_технический_университет_имени_Н._Э._Баумана', 'https://moskvichmag.ru/gorod/v-kakom-gorode-nahoditsya-baumanka/']}
+2025-01-31 19:50:37 | INFO | Successfully processed request 1
+2025-01-31 19:50:37 | INFO | Request completed: POST http://localhost:8080/api/request
+Status: 200
+Response body: {"id":1,"answer":null,"reasoning":"МГТУ им. Н. Э. Баумана находится в Москве.\\n Ответ сгенерирован с помощью YandexGPT","sources":["https://bmstu.ru/","https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9D._%D0%AD._%D0%91%D0%B0%D1%83%D0%BC%D0%B0%D0%BD%D0%B0","https://moskvichmag.ru/gorod/v-kakom-gorode-nahoditsya-baumanka/"]}
+Duration: 2.814s
+2025-01-31 19:50:37 | INFO | Incoming request: POST http://localhost:8080/api/request
+Request body: {
+  "query": "В каком городе находится Бауманка?",
+  "id": 1
+}
+2025-01-31 19:50:37 | INFO | Token: t1.9euelZqQysqZmZaZnJ6Uy82dy5fOl-3rnpWai5SWjJmJlYucz4rGz5TKmcjl9PdyLAtD-e8OBy3Z3fT3MlsIQ_nvDgct2c3n9euelZrHyYrNyJqNl5iajJOXx8iRyu_8xeuelZrHyYrNyJqNl5iajJOXx8iRyg.BfAmZ2cBEOF9pjDN7fKO-JaHeQmiXVRPKsh8FEsoOacfRRQDYSNIIFLzCN-YZVM5GUMt-GiiIPeYtV5-tRI3Bw
+2025-01-31 19:50:37 | INFO | Processing prediction request with id: 1
+2025-01-31 19:50:39 | INFO | Yandex GPT answer: {'answer': -1, 'reasoning': 'МГТУ им. Н. Э. Баумана находится в Москве.', 'links': ['https://bmstu.ru/', 'https://ru.wikipedia.org/wiki/Московский_государственный_технический_университет_имени_Н._Э._Баумана', 'https://yandex.ru/maps/org/mgtu_im_n_e_baumana/stationer/']}
+2025-01-31 19:50:39 | INFO | Successfully processed request 1
+2025-01-31 19:50:39 | INFO | Request completed: POST http://localhost:8080/api/request
+Status: 200
+Response body: {"id":1,"answer":null,"reasoning":"МГТУ им. Н. Э. Баумана находится в Москве.\\n Ответ сгенерирован с помощью YandexGPT","sources":["https://bmstu.ru/","https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9D._%D0%AD._%D0%91%D0%B0%D1%83%D0%BC%D0%B0%D0%BD%D0%B0","https://yandex.ru/maps/org/mgtu_im_n_e_baumana/stationer/"]}
+Duration: 2.466s

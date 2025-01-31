@@ -1,7 +1,7 @@
 import time
 from typing import List
 
-from fastapi import FastAPI, HTTPException, Request, Response
+from fastapi import FastAPI, HTTPException, Request, Response, BackgroundTasks
 from pydantic import HttpUrl
 from schemas.request import PredictionRequest, PredictionResponse
 from utils.logger import setup_logger
@@ -10,9 +10,11 @@ from utils.logger import setup_logger
 import requests
 
 OAUTH_TOKEN = 'y0__xCe3sWiAhjB3RMgvq3ekxIZOoNJglVYAvEdl2yjfz1I9twJXQ'
-# IAM_TOKEN = "t1.9euelZqQysqZmZaZnJ6Uy82dy5fOl-3rnpWai5SWjJmJlYucz4rGz5TKmcjl8_djMAxD-e8wCTpx_N3z9yNfCUP57zAJOnH8zef1656Vmp2ejJCUkcrGmImQxsaclsqP7_zF656Vmp2ejJCUkcrGmImQxsaclsqP.IGDOTqtX8xCKQimKkkxXHHFtQEDK1Dw3QmBvM-tVPfHgKcWxKSj3IubPWCl3W5QHqJdSAwIgcOEScKEW8JXJBQ"
+FOLDER_ID = 'b1gelm71dtja21t76a4n'
+IAM_TOKEN = None
 
 def get_iam_token():
+    global IAM_TOKEN
     url = 'https://iam.api.cloud.yandex.net/iam/v1/tokens'
     data = {"yandexPassportOauthToken": OAUTH_TOKEN}
     headers = {"Content-Type": "application/json"}
@@ -21,14 +23,11 @@ def get_iam_token():
         print(response)
         iam_token = response.json().get('iamToken')
         print(f"IamToken : {iam_token}")  
-        return iam_token
+        IAM_TOKEN = iam_token
     else:
-        
         print(f"err: {response.status_code}, {response.text}")
-        return None
-    
-IAM_TOKEN = get_iam_token()
-FOLDER_ID = 'b1gelm71dtja21t76a4n'
+        
+
 
 # Initialize
 app = FastAPI()
@@ -39,6 +38,9 @@ logger = None
 async def startup_event():
     global logger
     logger = await setup_logger()
+    get_iam_token()
+    
+    
 
 
 @app.middleware("http")
@@ -75,9 +77,13 @@ async def log_requests(request: Request, call_next):
 from get_gpt_answer import getYandexGptAnswer
 from get_search_answer import getYandexSearchAnswer
 
+
+CREDITS = r"\n Ответ сгенерирован с помощью YandexGPT"
+
 @app.post("/api/request", response_model=PredictionResponse)
 async def predict(body: PredictionRequest):
 
+    get_iam_token()
     try:
         # search_answer = getYandexSearchAnswer(IAM_TOKEN,FOLDER_ID, body.query)
 
@@ -85,6 +91,7 @@ async def predict(body: PredictionRequest):
         # Здесь вызов модели
         gpt_answer = getYandexGptAnswer(IAM_TOKEN,FOLDER_ID, body.query)
         answer = gpt_answer['answer'] if gpt_answer['answer'] !=-1 else None
+
         await logger.info(f"Yandex GPT answer: {gpt_answer}")
 
 
@@ -95,7 +102,7 @@ async def predict(body: PredictionRequest):
         response = PredictionResponse(
             id=body.id,
             answer=answer,
-            reasoning=gpt_answer['reasoning'],
+            reasoning=gpt_answer['reasoning']+CREDITS,
             sources=sources,
         )
         await logger.info(f"Successfully processed request {body.id}")
